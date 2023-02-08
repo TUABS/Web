@@ -23,6 +23,7 @@
 		"svelte-adapter-fastify": "^0.0.1",
 		"svelte-geolocation": "^0.3.0",
 		"svelte-leafletjs": "^0.9.1",
-		"svelte-preprocess-react": "^0.14.1"
+		"svelte-preprocess-react": "^0.14.1",
+		"vite-plugin-iso-import": "^1.0.0"
 	}
 }

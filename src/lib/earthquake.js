@@ -1,6 +1,6 @@
 export let datas = [];
 export let data = [];
-const isDev = false
+const isDev = true
 
 export async function getDatas(start, end) {
   let API_URL = ''

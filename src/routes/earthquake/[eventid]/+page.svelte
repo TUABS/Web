@@ -1,5 +1,6 @@
 <script>
     import { getData, data } from "$lib/earthquake.js";
+    import { browser } from '$app/env'
     import { ago } from "$lib/date.js";
     import { onMount } from "svelte";
     // get the event id from the URL
@@ -13,7 +14,7 @@
         Popup,
         Marker,
         Circle,
-    } from "svelte-leafletjs";
+    } from "svelte-leafletjs?client";
     const tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
     // center will be Turkey and user will can't move map out of Turkey
     const tileLayerOptions = {
@@ -65,11 +66,13 @@
 
 <react:Card.Content>
  <div id="map" style="width: 100%; height: 50vh; margin-bottom: 32px"> 
+    {#if browser}
     <LeafletMap options={{center: [earthquake.latitude, earthquake.longitude], zoom: 6}}>
         <TileLayer url={tileUrl} options={tileLayerOptions}/>
          <Circle latLng={[earthquake.latitude, earthquake.longitude]} radius={earthquake.magnitude * 5000} color="red" />
          <Marker latLng={[earthquake.latitude, earthquake.longitude]} />
 </LeafletMap>
+    {/if}
  </div>
         {#if earthquake.magnitude < 5}
             Hafif

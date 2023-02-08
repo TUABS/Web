@@ -1,4 +1,5 @@
 <script>
+    import { browser } from '$app/env'
     import {
         LeafletMap,
         TileLayer,
@@ -6,7 +7,7 @@
         Popup,
         Marker,
         Circle,
-    } from "svelte-leafletjs";
+    } from "svelte-leafletjs?client";
     import "leaflet/dist/leaflet.css";
     import { onMount } from "svelte";
     import { getDatas, datas } from "$lib/earthquake.js";
@@ -32,6 +33,7 @@
 </script>
 
 <div id="map">
+    {#if browser}
     <LeafletMap options={mapOptions}>
         <TileLayer url={tileUrl} options={tileLayerOptions} />
         {#if loaded}
@@ -86,6 +88,7 @@
             {/each}
         {/if}
     </LeafletMap>
+    {/if}
 </div>
 
 <style>

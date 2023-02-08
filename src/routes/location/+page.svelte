@@ -1,6 +1,7 @@
 <script>
     import Geolocation from "svelte-geolocation";
-    import { LeafletMap, TileLayer, Tooltip, Popup, Marker } from 'svelte-leafletjs';
+    import { LeafletMap, TileLayer, Tooltip, Popup, Marker } from 'svelte-leafletjs?client';
+    import { browser } from '$app/env'
     import 'leaflet/dist/leaflet.css';
 
     const tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
@@ -20,7 +21,7 @@
 
     
       {#if success}
-
+    {#if browser}
       <LeafletMap options={{center: [position.coords.latitude, position.coords.longitude], zoom: 13}}>
       <TileLayer url={tileUrl} options={tileLayerOptions}/>
      
@@ -34,6 +35,7 @@
       </Marker>
      
   </LeafletMap>
+    {/if}
     
     {:else}
     <pre>Konumunuz Alınıyor...</pre>
