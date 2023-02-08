@@ -28,6 +28,7 @@
 		summary: false,
 		buttonsCount: 5,
 	};
+
 	let tableData = [];
 
 	onMount(async () => {
@@ -48,6 +49,7 @@
 			>Birçok ilimizde meydana gelen deprem felaketinde yaralanan vatandaşlarımızın hangi hastanede olduklarını
 			bulabilmeleri için internette paylaşılan hastane verilerinden derlenmiştir.</react:Text
 		>
+		<react:Text h4 my={1}>Toplam Veri: {tableData.length} kişi</react:Text>
 	</div>
 
 	<Grid data={tableData} {columns} search={true} sort={true} pagination={paginationConfig} />

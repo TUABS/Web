@@ -95,9 +95,19 @@
 
 	#earthquakes :global(.card) {
 		cursor: pointer;
+		animation: fadein 0.2s ease-in-out;
 	}
 
 	#earthquakes :global(.card:hover) {
 		box-shadow: 0 0 0 2px #fff;
+	}
+
+	@keyframes fadein {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
 	}
 </style>
