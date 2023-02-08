@@ -133,5 +133,5 @@
 </react:Card.Footer>
 </react:Card>
 {:else}
-    <react:Text h1>Yükleniyor...</react:Text>
+    <pre>Deprem bilgileri yükleniyor...</pre>
 {/if}
