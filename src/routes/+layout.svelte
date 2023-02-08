@@ -12,7 +12,7 @@
       value = "1";
    } else if ($page.url.pathname == "/location") {
       value = "2";
-   } else if ($page.url.pathname == "/help") {
+   } else if ($page.url.pathname == "/map") {
       value = "3";
    } else if ($page.url.pathname == "/settings") {
       value = "4";
@@ -21,7 +21,7 @@
    onMount(() => {
          setTimeout(() => {
             loaded = true;
-         }, 250);
+         }, 500);
    });
 </script>
 
@@ -48,7 +48,7 @@
 
 <style>
    #app {
-      margin-top: 64px;
+      margin-top: 72px;
       margin-bottom: 256px;
    }
 </style>

@@ -29,9 +29,9 @@
     }
 </script>
 
-<div>
+
     <react:Card
-        width="100%"
+        width="clamp(300px, 100%, 600px)"
         type={typeColor}
         onClick={() => (window.location.href = `/earthquake/${eventID}`)}
     >
@@ -82,4 +82,4 @@
         >
     </react:Card.Footer>
     </react:Card>
-</div>
+
