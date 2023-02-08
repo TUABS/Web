@@ -23,7 +23,7 @@
     <div on:click={() => window.location.href = "/"} style="cursor: pointer;">
             <img
             style="width: 128px; "
-            src="/logo.svg"
+            src="/logofull.svg"
             alt=""
         />
     </div>
