@@ -1,7 +1,7 @@
 <script>
     import Geolocation from "svelte-geolocation";
     import { LeafletMap, TileLayer, Tooltip, Popup, Marker } from 'svelte-leafletjs?client';
-    import { browser } from '$app/env'
+    import { browser } from '$app/environment'
     import 'leaflet/dist/leaflet.css';
 
     const tileUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";

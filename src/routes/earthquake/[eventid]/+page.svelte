@@ -1,6 +1,6 @@
 <script>
     import { getData, data } from "$lib/earthquake.js";
-    import { browser } from '$app/env'
+    import { browser } from '$app/environment'
     import { ago } from "$lib/date.js";
     import { onMount } from "svelte";
     // get the event id from the URL
