@@ -23,7 +23,7 @@
         attribution: "© OpenStreetMap contributors, © AFAD",
     };
 
-    import "leaflet/dist/leaflet.css";
+    import "leaflet/dist/leaflet.css?client";
     let earthquake = {
         country: "",
         date: "",

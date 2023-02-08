@@ -35,7 +35,7 @@
         <react:Tabs.Item label="Depremler" value="1" />
         <react:Tabs.Item label="Konumum" value="2" />
         <react:Tabs.Item label="Harita" value="3" />
-        <react:Tabs.Item label="Ayarlar" value="4" />
+        <react:Tabs.Item label="Hastane" value="4" />
     </react:Tabs>
     {:else}
     <react:Select

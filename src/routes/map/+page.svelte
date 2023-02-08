@@ -8,7 +8,7 @@
         Marker,
         Circle,
     } from "svelte-leafletjs?client";
-    import "leaflet/dist/leaflet.css";
+    import "leaflet/dist/leaflet.css?client";
     import { onMount } from "svelte";
     import { getDatas, datas } from "$lib/earthquake.js";
     import { today, yesterday, tomorrow, ago } from "$lib/date.js";

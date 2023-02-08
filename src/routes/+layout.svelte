@@ -3,7 +3,7 @@
    import { onMount } from "svelte";
    import Nav from "$lib/Nav.svelte";
    import Footer from "$lib/Footer.svelte";
-   import "$lib/global.css";
+   import "$lib/global.css?client";
    import { page } from "$app/stores";
    let loaded = false;
    let value = "1";
