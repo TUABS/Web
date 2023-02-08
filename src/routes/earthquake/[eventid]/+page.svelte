@@ -101,7 +101,7 @@
                 icon>Lokasyon: {earthquake.location}</react:Link
             >
         </react:Text>
-        <react:Text small>
+        <react:Text>
             Enlem: {earthquake.latitude} Boylam: {earthquake.longitude}
         </react:Text>
         <react:Text>Derinlik: {earthquake.depth} km</react:Text>

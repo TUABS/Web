@@ -208,7 +208,7 @@
         </defs>
         </svg>
         
-        <react:Text small type="secondary">Veriler T.C. İçişleri Bakanlığı Afet Ve Acil Durum Yönetimi Başkanlığı Tarafından Sağlanmaktadır.</react:Text>
+        <react:Text small type="secondary">Veriler T.C. İçişleri Bakanlığı Afet Ve Acil Durum Yönetimi Başkanlığı tarafından sağlanmaktadır.</react:Text>
         <react:Text small type="secondary">Bu platform kar amacı gütmeden imece usulu bilgi paylaşımı için geliştirilmiştir. Hiçbir kurum ve kuruluşla ilişiği yoktur.</react:Text>
         <react:Text small type="secondary">Copyright © 2023 Türkiye Ulusal Afet Bilgi Sistemi</react:Text>
 

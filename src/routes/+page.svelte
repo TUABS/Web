@@ -33,7 +33,7 @@
 </script>
 
 <div id="earthquakes">
-    <div>
+    <div style="text-align: center;">
         <react:Text h1 my={0}>Son Depremler</react:Text>
         <react:Text small type="secondary">
             Bugünün depremleri
