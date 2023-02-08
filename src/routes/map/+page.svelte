@@ -28,7 +28,6 @@
     onMount(async () => {
         await getDatas(today, tomorrow);
         loaded = true;
-        console.log(datas);
     });
 </script>
 

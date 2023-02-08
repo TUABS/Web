@@ -1,6 +1,6 @@
 export let datas = [];
 export let data = [];
-const isDev = true
+const isDev = false
 
 export async function getDatas(start, end) {
   let API_URL = ''
@@ -22,7 +22,7 @@ export async function getData(eventid) {
   } else {
     API_URL = `https://api.tuabs.vercel.app/earthquake?eventid=${eventid}`
   }
-  console.log(API_URL);
+
     await fetch(API_URL)
       .then((res) => res.json())
       .then((fdata) => {

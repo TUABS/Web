@@ -18,13 +18,11 @@
     onMount(async () => {
         await getDatas(today, tomorrow).then(() => {
             totalpages = Math.ceil(datas.length / everypagehas);
-            console.log(totalpages);
             setEarthquakes();
         });
         if (window.location.hash) {
             setTimeout(() => {
                 page = parseInt(window.location.hash.replace("#", ""));
-                console.log(page);
                 setEarthquakes();
                 loaded = true;
             }, 500);

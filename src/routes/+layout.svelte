@@ -7,7 +7,7 @@
    import { page } from "$app/stores";
    let loaded = false;
    let value = "1";
-   console.log($page.url.pathname);
+
    if ($page.url.pathname == "/") {
       value = "1";
    } else if ($page.url.pathname == "/location") {
