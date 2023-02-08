@@ -35,11 +35,20 @@
 		<react:Text h1 my={0}>Son Depremler</react:Text>
 		<react:Text small type="secondary"> Bugünün depremleri </react:Text>
 	</div>
-	{#each earthquakes as earthquake}
-		<Earthquake {...earthquake} />
-	{/each}
-	<div>
-		{#if loaded}
+
+	{#if !loaded}
+		<div style="margin-top: 0;">
+			<div class="skeleton-holder">
+				{#each Array(20) as _}
+					<div class="skeleton-load" style="height: 295.8px; width: clamp(300px, 100%, 600px)" />
+				{/each}
+			</div>
+		</div>
+	{:else}
+		{#each earthquakes as earthquake}
+			<Earthquake {...earthquake} />
+		{/each}
+		<div>
 			{#key page}
 				<react:Pagination
 					onChange={(e) => {
@@ -51,8 +60,8 @@
 					initialPage={page}
 				/>
 			{/key}
-		{/if}
-	</div>
+		</div>
+	{/if}
 </div>
 
 <style>
@@ -64,6 +73,16 @@
 		width: 75%;
 		margin: 0 auto;
 	}
+
+	.skeleton-holder {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 16px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
 	#earthquakes > div {
 		width: 100%;
 		height: auto;
@@ -72,5 +91,13 @@
 		align-items: center;
 		margin-top: 64px;
 		flex-direction: column;
+	}
+
+	#earthquakes :global(.card) {
+		cursor: pointer;
+	}
+
+	#earthquakes :global(.card:hover) {
+		box-shadow: 0 0 0 2px #fff;
 	}
 </style>
