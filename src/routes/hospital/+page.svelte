@@ -1,7 +1,7 @@
 <script>
 	import { Text } from "@geist-ui/core";
 	import Grid from "gridjs-svelte";
-	import { getData, data } from "$lib/hospitaldata.js";
+	import { getData, data } from "$lib/hospital.js";
 	import { onMount } from "svelte";
 
 	let columns = [
