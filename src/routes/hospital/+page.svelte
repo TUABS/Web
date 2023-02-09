@@ -57,7 +57,7 @@
 
 <style>
 	@import "https://cdn.jsdelivr.net/npm/gridjs/dist/theme/mermaid.min.css";
-	@import "../lib/gridjs.theme.css";
+	@import "/gridjs.theme.css";
 
 	#hospital-container {
 		display: flex;
